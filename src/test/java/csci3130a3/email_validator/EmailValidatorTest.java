@@ -67,12 +67,29 @@ public class EmailValidatorTest extends TestCase {
 	}
 	
 	@Test
-	public void isValidate(){
+	public void testIsValidate(){
 		EmailValidator validator=new EmailValidator();
 		boolean report=true;
 		String ex1="try@test.com";
 		boolean r=validator.isValidate(ex1);
 		assertFalse(r != report);
 	}
+	
+	@Test
+	public void testIsLowerCase(){
+		EmailValidator validator=new EmailValidator();
+		boolean report=true;
+		String ex1="trytestcom";
+		boolean r=validator.isLowerCase(ex1);
+		assertFalse(r != report);
+	}
 
+	@Test
+	public void testIsLonger10(){
+		EmailValidator validator=new EmailValidator();
+		boolean report=true;
+		String ex1="try@test.com";
+		boolean r=validator.isLonger10(ex1);
+		assertFalse(r != report);
+	}
 }
