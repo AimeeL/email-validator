@@ -39,7 +39,7 @@ public boolean moreonePoint(String ex1) {
 
 public boolean isValidate(String ex1) {
 	boolean result=false;
-	result=this.justOneAt(ex1)&&this.moreonePoint(ex1);
+	result=this.justOneAt(ex1)&&this.moreonePoint(ex1)&&this.isLowerCase(ex1)&&this.isLonger10(ex1);
 	return result;
 }
 
